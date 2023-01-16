@@ -21,7 +21,7 @@
 
                     <div class="form-group mb-4 mt-4">
                         <label for="type">Tipo Di Progetto</label>
-                        <select name="type_id" id="type">
+                        <select name="type_id" id="type" class="form-select">
                             <option value="">Nessun Tipo Selezionato</option>
                             @foreach ($types as $type)
                                 <option value="{{ $type->id }}">{{ $type->name }}</option>
