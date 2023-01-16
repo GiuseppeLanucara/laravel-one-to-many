@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <h5 class="text-primary mb-4 mt-4 text-center">{{ $project->type?->name }}</h5>
         <h1 class="text-center mt-3">{{ $project->title }}</h1>
         <div class="d-flex justify-content-between mt-3">
             <h3>{{ $project->created_at }}</h3>
