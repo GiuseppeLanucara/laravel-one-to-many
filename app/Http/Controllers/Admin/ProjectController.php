@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -50,6 +51,7 @@ class ProjectController extends Controller
             $path = Storage::put('project_images', $request->cover_image);
             $form_data['cover_image'] = $path;
         }
+        $form_data['user_id'] = Auth::id();
         $project = Project::create($form_data);
         return redirect()->route('admin.projects.index')->with('message', 'Progetto inserito con successo!');
     }
