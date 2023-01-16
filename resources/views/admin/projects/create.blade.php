@@ -19,6 +19,16 @@
                         @enderror
                     </div>
 
+                    <div class="form-group mb-4 mt-4">
+                        <label for="type">Tipo Di Progetto</label>
+                        <select name="type_id" id="type">
+                            <option value="">Nessun Tipo Selezionato</option>
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="form-group mb-3">
                         <label for="cover_image">Immagine</label>
                         <input type="file" name="cover_image" id="cover_image"
