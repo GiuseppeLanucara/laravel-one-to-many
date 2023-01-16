@@ -10,7 +10,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content', 'slug', 'cover_image'];
+    protected $fillable = ['type_id', 'title', 'content', 'slug', 'cover_image'];
 
     public static function generateSlug($title)
     {
